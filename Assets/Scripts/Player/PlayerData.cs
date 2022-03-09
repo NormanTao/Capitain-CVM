@@ -32,6 +32,7 @@ public class PlayerData
     /// <summary>
     /// Représente le nombre de points de vie du personnage
     /// </summary>
+    /// 
     private int _vie;
     /// <summary>
     /// Représente le nombre d'énergie (entre 0 et 4)
@@ -124,11 +125,15 @@ public class PlayerData
         this._vie--;
         this.UIPerteVie();
         if (this._vie <= 0)
+        {
             this.Gameover();
+
+        }
         else
         {
             this.IncrEnergie(MAX_ENERGIE);
             GameManager.Instance.RechargerNiveau();
+
         }
     }
 

@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log(this);
         SaveData();
         SceneManager.activeSceneChanged += ChangementScene;
         ChangementScene(new Scene(), SceneManager.GetActiveScene());
