@@ -53,7 +53,10 @@ public class EnnemyBehaviour : MonoBehaviour
             _animator.SetTrigger("Destruction");
             GameManager.Instance.PlayerData.IncrScore(this._pointDestruction);
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            this.gameObject.GetComponent<EnnemyPatrol>().enabled = false;
+            if (this.gameObject.GetComponent<EnnemyPatrol>() != null)
+                this.gameObject.GetComponent<EnnemyPatrol>().enabled = false;
+            if (this.gameObject.GetComponent<EnemyProjectile>() != null)
+                this.gameObject.GetComponent<EnemyProjectile>().enabled = false;
             GameObject.Destroy(this.transform.parent.gameObject, 0.5f);
             this._destructionEnCours = true;
         }
