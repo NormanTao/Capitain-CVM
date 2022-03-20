@@ -240,21 +240,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8237258115544973771}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &53763890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53763889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2be9602358dd6974ea7bc246c7068d36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pv: 1
-  _toleranceAngle: 1.5
-  _pointDestruction: 5
 --- !u!61 &53763892
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -281,6 +266,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4358139, y: 0.32245636}
   m_EdgeRadius: 0
+--- !u!114 &53763894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53763889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0646ee1be76bb479c3f4424e4da173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 1
+  proj: {fileID: 1258230685}
 --- !u!61 &53763895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -307,6 +306,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.636261, y: 1.1980228}
   m_EdgeRadius: 0
+--- !u!114 &53763896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53763889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be9602358dd6974ea7bc246c7068d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pv: 2
+  _toleranceAngle: 1.5
+  _pointDestruction: 5
 --- !u!1 &148712898
 GameObject:
   m_ObjectHideFlags: 0
@@ -62452,5 +62466,6 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.7686275
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8237258115598737149, guid: f748f2876cf8ff740afe03b024d01815, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f748f2876cf8ff740afe03b024d01815, type: 3}
