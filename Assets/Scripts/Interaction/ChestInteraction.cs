@@ -6,29 +6,15 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(SpriteRenderer))]
 public class ChestInteraction : BaseInteraction
 {
-    /// <summary>
-    /// Représente le nombre de points qui sera ajouter à
-    /// l'ouverture
-    /// </summary>
     [SerializeField, Range(0, 25)]
     private int _scoreBonus;
 
-    /// <summary>
-    /// Détermine si le coffre est ouvert
-    /// </summary>
     [SerializeField]
     private bool _estOuvert = false;
 
-    /// <summary>
-    /// Sprite à ouvrir quand le coffre est ouvert
-    /// </summary>
     [SerializeField]
     private Sprite _coffreOuvert;
 
-    /// <summary>
-    /// Nom du coffre utiliser dans le fichier de sauvegarde
-    /// Le nom est autogénéré dans la méthode Start
-    /// </summary>
     private string _name;
 
     private void Start()
