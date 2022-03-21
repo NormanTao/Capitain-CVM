@@ -73,7 +73,7 @@ public class PlayerData
     public PlayerData(int vie = 1, int energie = 2, int score = 0,
         float volumeGeneral = 0, float volumeMusique = 0, float volumeEffet = 0,
         System.Action uiPerteEnergie = null, System.Action uiPerteVie = null,
-        System.Action gameOver = null, List<string> ChestList = null, int CurrentLevel = 0, List<string> HelmetList = null)
+        System.Action gameOver = null, List<string> ChestList = null, int CurrentLevel = 1, List<string> HelmetList = null)
     {
         this._vie = vie;
         this._energie = energie;
