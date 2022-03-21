@@ -10,10 +10,9 @@ public class FinDeNiveau : MonoBehaviour
             Debug.Log("Félicitation, le niveau est terminé.");
             GameManager.Instance.SaveData();
             GameManager.Instance.PlayerData.LevelFinished();
-            int nextLevel = GameManager.Instance.PlayerData.MaxLevel + 1;
+            int nextLevel = GameManager.Instance.PlayerData.CurrentLevel;
             if (nextLevel > 3)
                 SceneManager.LoadScene("MainMenu");
-            
             else 
                 SceneManager.LoadScene("Level"+ nextLevel);
 

@@ -11,6 +11,7 @@ public class ProjectileBehavior : MonoBehaviour
     Vector2 _moveDirection;
     Vector2 _currentPosition;
     // Start is called before the first frame update
+	//https://www.youtube.com/watch?v=kOzhE3_P2Mk
     void Start()
     {
         if (!gameObject.name.Equals("originalProj"))

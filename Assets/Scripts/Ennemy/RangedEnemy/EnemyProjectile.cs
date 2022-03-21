@@ -10,6 +10,7 @@ public class EnemyProjectile : MonoBehaviour
     float fireRate = 1f;
     [SerializeField]
     GameObject proj;
+	//https://www.youtube.com/watch?v=kOzhE3_P2Mk
 
     float nextFire;
     void Start()

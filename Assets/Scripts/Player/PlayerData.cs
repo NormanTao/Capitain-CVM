@@ -34,7 +34,7 @@ public class PlayerData
 
     private List<string> _helmetCollected;
 
-    private int _maxLevel;
+    private int _currentLevel;
 
     public const int MAX_ENERGIE = 4;
 
@@ -51,7 +51,7 @@ public class PlayerData
 
     public string[] ListHelmetCollected { get { return this._helmetCollected.ToArray(); } }
 
-    public int MaxLevel { get { return this._maxLevel;  } }
+    public int CurrentLevel { get { return this._currentLevel;  } }
 
 
     public PlayerData()
@@ -67,13 +67,13 @@ public class PlayerData
         this.Gameover = null;
         this._chestOpenList = new List<string>();
         this._helmetCollected = new List<string>();
-        this._maxLevel = 0;
+        this._currentLevel = 0;
     }
 
     public PlayerData(int vie = 1, int energie = 2, int score = 0,
         float volumeGeneral = 0, float volumeMusique = 0, float volumeEffet = 0,
         System.Action uiPerteEnergie = null, System.Action uiPerteVie = null,
-        System.Action gameOver = null, List<string> ChestList = null, int maxLevel = 0, List<string> HelmetList = null)
+        System.Action gameOver = null, List<string> ChestList = null, int CurrentLevel = 0, List<string> HelmetList = null)
     {
         this._vie = vie;
         this._energie = energie;
@@ -87,7 +87,7 @@ public class PlayerData
         this._chestOpenList = new List<string>();
         if (ChestList != null)
             this._chestOpenList = ChestList;
-        this._maxLevel = maxLevel;
+        this._currentLevel = CurrentLevel;
 
         this._helmetCollected = new List<string>();
         if (HelmetList != null)
@@ -147,7 +147,8 @@ public class PlayerData
 
     public void LevelFinished()
     {
-        this._maxLevel += 1;
+        if (this._currentLevel < 3)
+            this._currentLevel += 1;
     }
 
     /// <summary>
