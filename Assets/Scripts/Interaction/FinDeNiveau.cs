@@ -11,8 +11,11 @@ public class FinDeNiveau : MonoBehaviour
             GameManager.Instance.SaveData();
             GameManager.Instance.PlayerData.LevelFinished();
             int nextLevel = GameManager.Instance.PlayerData.MaxLevel + 1;
-
-            SceneManager.LoadScene("Level"+ nextLevel);
+            if (nextLevel > 3)
+                SceneManager.LoadScene("MainMenu");
+            
+            else 
+                SceneManager.LoadScene("Level"+ nextLevel);
 
         }
     }
